@@ -19,7 +19,7 @@
 
 
 <div>
-    <h2 id="first-hdr">second hello</h2>
+    <h2 id="second-hdr">second hello</h2>
 </div>
 
 
@@ -32,11 +32,29 @@
         crossorigin="anonymous"></script>
 
 <script>
-    alert($('#first-hdr').html());
 
-    alert($('#second-hdr').html());
+//    $(document).ready(function() {
+//
+//        $('li').css('font-size', '20px');
+//        alert($('#first-hdr').html());
+//        alert($('#second-hdr').html());
+//
+//    });
 
+    $('h1').click(function() {
+        $('#first-hdr').css('color', 'blue');
+    });
 
+    $('p').click(function() {
+        $('.body-text').css('color', 'blue');
+        $('.body-text').css('font-size', '18px');
+    });
+
+    $('li').hover(function(){
+        $('.diff-fish').css("color", "yellow");
+    }, function(){
+        $('.diff-fish').css("color", "pink");
+    });
 
 </script>
 
