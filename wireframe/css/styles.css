@@ -1,0 +1,194 @@
+/* Reset */
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 1.1em;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav > ul {
+    list-style-type: none;
+}
+
+.hidden{
+    display: none;
+
+}
+
+.container{
+    width : 90%;
+    max-width : 890px;
+    margin : 0 auto;
+
+}
+
+/* Layout */
+
+header > h1 {
+    float: left;
+}
+
+header > nav {
+    float: right;
+}
+
+.nav-item {
+    display: inline-block;
+    padding : 4px;
+}
+
+
+.hero {
+    clear: both;
+}
+
+/*For image*/
+img {
+    width:100%;
+    height: auto;
+}
+
+/*sub-section */
+
+#leftcolumn {
+    width: 50%;
+    display: block;
+    float : left;
+
+}
+
+#rightcolumn {
+    width: 50%;
+    display: block;
+    float: right;
+}
+
+
+footer > p{
+
+    float : left;
+
+}
+
+footer{
+
+    clear : both;
+}
+
+footer > nav {
+
+    float: right;
+}
+
+.nav-item2{
+
+display : inline-block;
+}
+
+
+.logo{
+
+    width : 20px;
+    height : 15px;
+}
+
+
+
+/*mobile code*/
+@media screen and (max-width: 500px) {
+
+    .nav-item{
+        display : block;
+        text-align: center;
+
+
+    }
+
+    header > h1 {
+        float: none;
+        text-align: center;
+    }
+
+    header > nav {
+        float: none;
+        text-align: center;
+    }
+
+nav > ul{
+    padding-left: 0;
+}
+
+
+    #leftcolumn {
+        display: block;
+        float : none;
+        width: 100%;
+
+    }
+
+    #rightcolumn {
+        display: block;
+        float: none;
+        width : 100%;
+    }
+
+    .nav-item2{
+        display: inline-block;
+
+    }
+
+    footer > p{
+
+        float : none;
+
+    }
+
+    /*footer{*/
+
+        /*clear : both;*/
+    /*}*/
+
+    footer > nav {
+
+        float: none;
+    }
+
+    .backgroundC{
+
+        background-color: darkkhaki;
+    }
+
+    div .backgroundC{
+        margin-bottom: 3px;
+    }
+
+    .mobile_top_link{
+        background-color: aqua;
+        border-style: solid;
+        border-color: black;
+    }
+
+    .hidden{
+        border-color: black;
+        border-style: solid;
+        background-color: aqua;
+        text-align: center;
+        align-content: center;
+        font-family: sans-serif;
+        font-size: 1.1em;
+        line-height: 1.2em;
+        margin: 0;
+        padding: 0;
+        display : block
+
+
+    }
+
+}

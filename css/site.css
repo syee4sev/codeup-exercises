@@ -1,0 +1,103 @@
+/*
+this content is stored in a file named "site.css"
+in a directory named "css" in the web root
+*/
+
+.fancy-header {
+    color: blue;
+    text-decoration: underline;
+}
+
+ul {
+
+     list-style: none;
+
+}
+
+
+#menu_link1{
+    font-family: Arial;
+    position: absolute;
+    right: 1000px;
+    top: 20px;
+
+}
+
+#menu_link2{
+    font-family: Arial;
+    position: absolute;
+    right: 900px;
+    top: 20px;
+
+}
+
+#menu_link3{
+    font-family: Arial;
+    position: absolute;
+    right: 800px;
+    top: 20px;
+
+}
+
+#menu_link4{
+    font-family: Arial;
+    position: absolute;
+    right: 650px;
+    top: 20px;
+
+}
+
+#menu_link5{
+    font-family: Arial;
+    position: absolute;
+    right: 500px;
+    top: 20px;
+
+}
+
+
+#ul_font{
+
+    font-family: "Arial";
+
+}
+
+nav{
+    position: static;
+}
+
+#login_div{
+
+    height: 20px;
+    width: 75px;
+    border-color: gray;
+    border-size:1px;
+    border-style: solid;
+    position: absolute;
+    right: 100px;
+    top: 5px;
+
+
+}
+
+#register_div{
+
+    height: 20px;
+    width: 75px;
+    border-color: gray;
+    border-size:1px;
+    border-style: solid;
+    position: absolute;
+    right: 100px;
+    top: 35px;
+
+}
+
+#search_logo{
+    position: absolute;
+    right: 200px;
+    top: 15px;
+    height: 30px;
+    width: 30px;
+
+}

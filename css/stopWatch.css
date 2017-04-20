@@ -1,0 +1,42 @@
+
+
+#stopBox{
+width: 550px;
+length: 8em;
+border-style: solid;
+border-color: #4c4c4c;
+}
+
+.timeChars{
+font-family: Futura;
+font-size: x-large;
+font-weight: 100;
+color: #5e5e5e;
+}
+
+#hours{
+font-family: Futura;
+font-size: x-large;
+font-weight: 100;
+color: #5e5e5e;
+margin-left:185px;
+}
+
+#start{
+
+}
+
+
+#stop{
+
+}
+
+
+#pause{
+
+}
+
+.btns1{
+    margin-left: 180px;
+
+}

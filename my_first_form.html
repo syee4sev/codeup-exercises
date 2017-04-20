@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Form</title>
+</head>
+<body>
+
+<form action="http://requestb.in/115e8941" method="POST">
+
+    <div>
+        <label for="fname">First Name</label>
+        <input id="fname" type="text" name="first_name" placeholder="First name here">
+    </div>
+
+    <br>
+
+    <label for="lname">Last Name</label>
+    <input id="lname" type="text" name="last_name">
+
+    <br>
+
+    <label  for="blue">Blue</label>
+    <input type="checkbox" name="colors" value="blue" id="blue">
+    <label  for="gray">gray</label>
+    <input type="checkbox" name="colors" value="gray" id="gray">
+    <label  for="white">white</label>
+    <input type="checkbox" name="colors" value="white" id="white">
+
+
+    <p>What day is it?</p>
+    <label  for="monday">Monday</label>
+    <input type="radio" name="day" value="1" id="monday">
+    <label  for="Tuesday">Tuesday</label>
+    <input type="radio" name="day" value="2" id="Tuesday">
+
+    <input type="hidden" name="SSN" value="1234">
+
+    <br>
+    <br>
+
+
+    <h2>Send Email:</h2>
+        <p>
+            <label for="to">To:</label>
+            <input id="to" name="to" type="text">
+        </p>
+        <p>
+            <label for="from">From:</label>
+            <input id="from" name="from" type="text">
+        </p>
+        <p>
+            <label for="subject">Subject:</label>
+            <input id="subject" name="subject" type="text">
+        </p>
+        <p>
+            <textarea id="email_text" name="email_text">Content Here</textarea>
+        </p>
+        <p>
+            <input type="checkbox" id="copy_needed" name="copy_needed" value="yes" checked>
+            <label for="copy_needed">Copy of email:</label>
+        </p>
+
+    <h2>Multiple Choice Test:</h2>
+
+        <p>What is your favorite national park?</p>
+        <label>
+            <input type="radio" name="p1" value="yosemite"> Yosemite
+        </label>
+        <label>
+            <input type="radio" name="p1" value="grand_canyon"> Grand Canyon
+        </label>
+        <label>
+            <input type="radio" name="p1" value="yellowstone"> Yellowstone
+        </label>
+
+        <p>What parks have you visited?</p>
+        <label>
+            <input type="checkbox" id="pk1" name="pk[]" value="yellowstone"> Yellowstone
+        </label>
+        <label>
+            <input type="checkbox" id="pk2" name="pk[]" value="grand_tetons"> Grand Tetons
+        </label>
+        <label>
+            <input type="checkbox" id="pk3" name="pk[]" value="grand_canyon"> Grand Canyon
+        </label>
+
+    <h2>DropDown Testing</h2>
+        <label for="team">What is your favorite football team?</label>
+        <div><select id="team" name="team">
+            <option value="dallas cowboys">Dallas Cowboys</option>
+            <option value="2" selected>New York Giants</option>
+            <option value="3">Philadelphia Eagles</option>
+            <option value="4">Washington Redskins</option>
+        </select></div>
+
+    <br>
+
+
+    <!--<input id="submit" type="submit" name="submit_button">-->
+    <button>Send</button >
+
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

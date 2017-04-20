@@ -1,0 +1,54 @@
+body, html{
+
+    height : 100%;
+    width : 100%
+}
+
+h2{
+    /*padding: 1em;*/
+}
+
+* {
+
+    margin : 0;
+    padding : 0;
+    font-size: 1.1em;
+    line-height: 1.2em;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+main {
+
+width: 760px;
+    float: left;
+
+}
+
+nav > ul{
+    list-style-type: none;
+}
+
+.container{
+
+    width : 960px;
+    margin : 0 auto
+}
+
+.nav-item{
+
+    display: inline-block;
+}
+
+
+
+aside{
+    width : auto;
+    float : right;
+}
+
+footer{
+    clear: both;
+    margin-top : 2em;
+    padding-top : 2em;
+}

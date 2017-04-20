@@ -1,0 +1,53 @@
+# Notes
+
+* markdown - is a language similar to html, it is used to describe the structure of a doc.   syntax is shorter.
+* prompt - the text before the cursor is a terminal
+
+# Terminal commands
+* pwd - print working directory
+* cd - change directory
+* ~ pwd - to home directory
+* ~ whoami -  tells pc username
+
+integraged terminal allows you to be in needed path for projects.
+
+# html
+* beginning tag - closing tag and everything in between is the ELEMENT!
+* repertoire - the set of numeric representations of characters
+
+# character set
+ascii - 0 to 255
+ 0 - 1 - groups of 8 - bytes
+
+unicode - supports a wider range
+
+# tools
+* typing.io
+* shortcutfoo.com
+
+# git
+VCS - versioning control system
+* snapshot - commits(how code looks like at a specific moment)
+* your name, your email, message, identifier(computer information(hash-32 char number)
+* repository - folder, your code + git information(history of your code)
+
+github - web application and social network
+
+* git init
+    - initialize git repository
+* git status
+    - outputs current state of repository
+* git add notes.md ( press enter)
+* git add hello-world.html ( press enter)
+* git commit -m "Add notes and hello world with html"
+    - do this once the files are ADDED
+* git log
+    - shows commit log information
+
+*remote - a remote git repository
+
+* git remote add origin git@github.com:CodeupClassroom/pinnacles_html.git
+* git push orign master
+
+martinfowler.com
+    - good general resource, blog

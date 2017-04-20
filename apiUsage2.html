@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>google map</title>
+
+
+    <style>
+
+        #map-display {
+            height: 300px;
+            width: 800px;
+            background-color: blue;
+        }
+
+        .zoomBtn {
+            border: solid;
+            border-style: solid;
+            border-color: #4c4c4c;
+            background-color: #f0ad4e;
+            border-radius: 3px;
+            align-content: center;
+            width: 25px;
+            length: 10px;
+
+        }
+
+        /*.zoomUpd {*/
+            /*border: solid;*/
+            /*border-style: solid;*/
+            /*border-color: #4c4c4c;*/
+            /*border-radius: 3px;*/
+            /*align-content: center;*/
+            /*width: 64px;*/
+            /*length: 10px;*/
+        /*}*/
+
+        .update{
+            border: solid;
+            border-style: solid;
+            border-color: #4c4c4c;
+            border-radius: 3px;
+            background-color: #f0ad4e;
+            align-content: center;
+            width: 85px;
+            length: 10px;
+        }
+
+        #parmBox{
+            background-color: #9d9d9d;
+            width : 360px;
+        }
+
+        .lnglatBtn{
+            font-family: Hei;
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+<div id="map-display"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqic5vPcvnIGzxR3BnjbJraS2Fl1840Bw"></script>
+
+<br>
+
+<div id="parmBox">
+
+<label class="lnglatBtn" type="label">Latitude: </label>
+<input type="text" id="lat"></input>
+
+<button class="zoomBtn" id="in">+</button>
+<button class="zoomBtn" id="out">-</button>
+<button class="update" id="upd">Update</button>
+
+<br>
+<br>
+<label class="lnglatBtn" type="label">Longitude: </label>
+<input type="text" id="lng"></input>
+<br>
+<br>
+<label type="label">Address: </label>
+<input type="text" id="ad" style="width: 232px"></input>
+<br>
+<br>
+
+
+</div>
+
+<script>
+    (function () {
+        "use strict";
+
+        var zm = 10;
+        var address = "634 Circle View Drive, Pipe Creek, TX , 78063";
+        var geocoder = new google.maps.Geocoder();
+        var latt = document.getElementById("lat").value;
+        var long = document.getElementById("lng").value;
+        var infowindow = new google.maps.InfoWindow({
+            content: "Changing the world, one programmer at a time."
+        });
+
+        // get location by lng, lat
+        var mapOptions = {
+            zoom: zm,
+            disableDefaultUI: true,
+            center: {
+                lat: 29.4268,
+                lng: -98.4896
+            }
+        };
+
+
+        // display map
+        var map = new google.maps.Map(document.getElementById("map-display"), mapOptions);
+
+        var marker = new google.maps.Marker({
+            position: mapOptions.center,
+            map: map,
+            title: 'You are here!'
+        });
+
+        function centerOnAddress(address) {
+            // get specific address - using var address
+            geocoder.geocode({"address": address}, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    map.setCenter(results[0].geometry.location)
+
+                    var marker = new google.maps.Marker({
+                        position: results[0].geometry.location,
+                        map: map,
+                        title: 'You are here!'
+                    });
+                }
+            });
+        }
+
+        centerOnAddress(address);
+
+
+        //update map when update button is pressed
+        var update = document.getElementById("upd");
+        update.addEventListener('click', function () {
+            var latInput = document.getElementById("lat");
+            var lngInput = document.getElementById("lng");
+            var addInput = document.getElementById("ad");
+
+            if(latInput.value == '' && lngInput.value == ''){
+                centerOnAddress(addInput.value);
+            }else{
+                var center = {
+                    lat: parseFloat(latInput.value),
+                    lng: parseFloat(lngInput.value)
+                };
+
+                map.setCenter(center);
+
+                var marker = new google.maps.Marker({
+                    position: center,
+                    map: map,
+                    title: 'You are here!'
+                });
+
+                infowindow.open(map, marker);
+            }
+
+
+        });
+
+        // add zoom button
+        var z1 = document.getElementById("in");
+        z1.addEventListener("click", function () {
+            map.setZoom(map.getZoom() + 1)
+
+        });
+
+        var z2 = document.getElementById("out");
+        z2.addEventListener("click", function () {
+            map.setZoom(map.getZoom() - 1)
+        });
+
+//        var marker = new google.maps.marker({
+//            position : results[0].geometry.location,
+//            map: map
+//        });
+    })();
+
+
+    var i = 0;
+    while(i > 10) {
+        console.log(i);
+        i++;
+    }
+
+
+
+</script>
+
+
+</body>
+</html>
