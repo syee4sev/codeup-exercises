@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Park FAQ</title>
+</head>
+
+<style>
+    .invisible{
+        display : none;
+    }
+</style>
+
+
+<!--main  body-->
+<body>
+
+
+<dl>
+    <dt>Yellowstone</dt>
+    <dd class="invisible first-park">known for its gysers and wildlife</dd>
+    <dt>Grand Teton</dt>
+    <dd class="invisible second-park">Grand Teton mountains are spectacular</dd>
+    <dt>Grand Canyon</dt>
+    <dd class="invisibl third-park">View is incredible</dd>
+    <dt>Mount Rushmore</dt>
+    <dd class="invisible fourth-park">Beautiful trail around the park</dd>
+</dl>
+
+<a href="#" id="toggle">Toggle Class</a>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+
+
+<script>
+    $(document).ready(function() {
+        "use strict";
+        $('#toggle').click(function(event) {
+            $('dd').toggleClass('invisible');
+        });
+    });
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

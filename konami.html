@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+
+
+<style>
+    body{
+        background-color: black;
+    }
+
+    h1{
+    font-size: 30px;
+    color: white;
+    }
+</style>
+
+
+
+<body>
+<h1>Shall we play a game?</h1>
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+
+<script>
+    'use strict';
+var konamiChars = ['38', '38', '40', '40', '37', '39', '37', '39', '66', '65'];
+var forloops = $('.forLoopIndex');
+var values = [];
+var i = 0;
+
+$(document).keyup(function(event){
+    if(event.keyCode == konamiChars[i]) {
+         console.log(event.keyCode);
+        i++;
+
+        if(event.keyCode == konamiChars[9]){
+            window.location.replace("http://www.classicgamesarcade.com/");
+        }
+    } else {
+        i = 0;
+    }
+});
+</script>
+
+
+</body>
+</html>
